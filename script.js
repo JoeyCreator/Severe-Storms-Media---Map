@@ -11,3 +11,12 @@ var map = new mapboxgl.Map({
 
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
+
+// edit code below this comment //
+
+
+var marker = new mapboxgl.Marker({
+  color: "orange",
+  draggable: false
+}).setLngLat([-73.8206, 45.4896])
+  .addTo(map);

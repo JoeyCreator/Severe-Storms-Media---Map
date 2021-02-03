@@ -24,11 +24,7 @@ request.onreadystatechange = function () {
 };
 
 var body = {
-  'id': '5c9f9e6f4dd33',
-  'markers': [
-    36181,
-    13573
-  ]
+  'id': '5c9f9e6f4dd33'
 };
 
 request.send(JSON.stringify(body));

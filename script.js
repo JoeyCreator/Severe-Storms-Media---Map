@@ -9,10 +9,29 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
+var request = new XMLHttpRequest();
 
-// create the popup
+request.open('POST', 'https://www.spotternetwork.org/positions');
 
+request.setRequestHeader('Content-Type', 'application/json');
 
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+var body = {
+  'id': '5c9f9e6f4dd33',
+  'markers': [
+    36181,
+    13573
+  ]
+};
+
+request.send(JSON.stringify(body));
 
 // GeoLocation **
 

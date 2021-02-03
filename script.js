@@ -9,25 +9,12 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-var request = new XMLHttpRequest();
+const RSS_URL = `https://www.spotternetwork.org/feeds/gr-all.txt`;
 
-request.open('POST', 'https://www.spotternetwork.org/positions');
-
-request.setRequestHeader('Content-Type', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-var body = {
-  'id': '5c9f9e6f4dd33'
-};
-
-request.send(JSON.stringify(body));
+fetch(RSS_URL)
+  .then(response => response.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/txt"))
+  .then(data => console.log(data))
 
 // GeoLocation **
 

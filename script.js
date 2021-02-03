@@ -14,9 +14,7 @@ map.addControl(nav, 'top-left');
 
 // edit code below this comment //
 
-
-var marker = new mapboxgl.Marker({
-  color: "orange",
-  draggable: false
-}).setLngLat([-73.8206, 45.4896])
-  .addTo(map);
+map.addSource('noaa', {
+    type: 'geojson',
+    data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.lyr.geojson'
+});

@@ -14,7 +14,8 @@ map.addControl(nav, 'top-left');
 
 // edit code below this comment //
 
-map.addSource('noaa', {
-    type: 'geojson',
-    data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.lyr.geojson'
+
+map.addSource('spcnoaa', {
+  type: 'geojson',
+  data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
 });

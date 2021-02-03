@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
   center: [-73.5673, 45.5017],
-  zoom: 3.5
+  zoom: 9.5
 });
 
 var nav = new mapboxgl.NavigationControl();

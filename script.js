@@ -1,4 +1,4 @@
-const mapbox_token = "pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2trcG14bGJtMnltcTJvbndudThkb2drZiJ9.WjTov6fnMyLClhzWYq8Fig"
+const mapbox_token = "sk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2trcTJlMXdxMDFqajJ2cWwwZXhjdHMyeCJ9.vykq4k59-10j7HKQ3Tz_Gw"
 
 mapboxgl.accessToken = mapbox_token;
 

@@ -9,17 +9,5 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-
-// Application 
-
-
-
-
-// End Applicadtion **
-
-// GeoLocation **
-
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
-
-//End*

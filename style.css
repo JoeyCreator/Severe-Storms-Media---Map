@@ -1,12 +1,9 @@
-#map {
-  width: 100vw;
-  height: 100vh;
+	#map {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
 .sidenav {
   width: 130px;
   position: fixed;
@@ -32,8 +29,8 @@
 }
 
 .main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 140px;
+  font-size: 28px; 
   padding: 0px 10px;
 }
 

@@ -14,16 +14,32 @@ map.addControl(nav, 'top-left');
 
 // edit code below this comment //
 
-
-var data = null;
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === 4) {
-    console.log(this.responseText);
+map.on('load', function () {
+  map.addSource('Montreal', {
+    'type': 'geojson',
+    'data': {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Polygon',
+        'coordinates': [
+          [
+            [-73.5673, 45.5017],
+            [-73.8206, 45.4896],
+            [-73.7500, 45.4503],
+            [-73.7500, 45.4503],
+          ]
+        ]
+      }
     }
+  });
+  map.addLayer({
+    'id': 'Montreal',
+    'type': 'fill',
+    'source': 'Montreal',
+    'layout': {},
+    'paint': {
+      'fill-color': 'red',
+      'fill-opacity': 0.5
+    }
+  });
 });
-xhr.open("GET", "https://api.stm.info/pub/od/i3/v1/messages/etatservice/");
-xhr.setRequestHeader("origin", "mon.domain.xyz");
-xhr.setRequestHeader("apikey", "l7****3370ae5473053a71454d99bc19f0d6");
-xhr.send(data);

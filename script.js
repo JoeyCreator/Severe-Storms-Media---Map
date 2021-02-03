@@ -9,12 +9,13 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-const RSS_URL = `http://www.spotternetwork.org/feeds/rss-positions.xml`;
 
-fetch(RSS_URL)
-  .then(response => response.text())
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then(data => console.log(data))
+// Application 
+
+
+
+
+// End Applicadtion **
 
 // GeoLocation **
 

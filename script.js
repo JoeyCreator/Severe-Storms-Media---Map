@@ -17,5 +17,5 @@ map.addControl(nav, 'top-left');
 
 map.addSource('spcnoaa', {
   type: 'geojson',
-  data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+  data: 'https://opendata.arcgis.com/datasets/85c59fe951504e9b9919e24d7a684084_3.geojson'
 });

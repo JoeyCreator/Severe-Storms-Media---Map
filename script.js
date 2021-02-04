@@ -9,14 +9,15 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-map.addSource('nooaspc', {
-    type: 'geojson',
-    data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
-});
-
-
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
 // disable map zoom when using scroll
 map.scrollZoom.disable();
+
+// Storm Prediction Center //
+
+map.addSource('nooaspc', {
+  type: 'geojson',
+  data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+});

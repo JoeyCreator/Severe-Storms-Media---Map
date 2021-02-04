@@ -15,6 +15,14 @@ map.addControl(nav, 'top-left');
 
 // disable map zoom when using scroll => Map Setting //
 
+// disable map zoom when using scroll
+map.scrollZoom.disable();
+
+
+
+
+// Storm Chasers Network //
+
 var request = new XMLHttpRequest();
 
 request.open('POST', 'https://www.spotternetwork.org/positions');
@@ -30,7 +38,11 @@ request.onreadystatechange = function () {
 };
 
 var body = {
-  'id': 'APPLICATION-ID'
+  'id': 'APPLICATION-ID',
+  'markers': [
+    36181,
+    13573
+  ]
 };
 
 request.send(JSON.stringify(body));

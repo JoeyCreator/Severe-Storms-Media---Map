@@ -14,4 +14,4 @@ var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
 
-// Add Storm Prediction Center Outloo //*
+// Add Storm Prediction Center Outlook Day1 - Day2 - Day3 And More //*

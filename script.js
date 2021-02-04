@@ -30,7 +30,7 @@ xhr.addEventListener("readystatechange", function () {
 	}
 });
 
-xhr.open("GET", "https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=38.5&lat=-78.5");
+xhr.open("GET", "https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=37.9643&lat=-91.8318");
 xhr.setRequestHeader("x-rapidapi-key", "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757");
 xhr.setRequestHeader("x-rapidapi-host", "weatherbit-v1-mashape.p.rapidapi.com");
 

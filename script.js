@@ -5,8 +5,8 @@ mapboxgl.accessToken = mapbox_token;
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
-  center: [-73.5673, 45.5017],
-  zoom: 8.5
+  center: [-96.052335, 39.159882],
+  zoom: 3.5
 });
 
 // Edit Code Below This Comment //

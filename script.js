@@ -13,12 +13,13 @@ var map = new mapboxgl.Map({
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
-// disable map zoom when using scroll => Map Setting //
-
 // disable map zoom when using scroll
 map.scrollZoom.disable();
 
 
-
-
 // Storm Chasers Network //
+
+map.addSource('noaa', {
+  type: 'geojson',
+  data: 'https://spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+});

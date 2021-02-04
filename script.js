@@ -13,5 +13,8 @@ var map = new mapboxgl.Map({
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
+// disable map zoom when using scroll
+map.scrollZoom.disable();
+
 
 // Add Storm Prediction Center Outlook Day1 - Day2 - Day3 And More //*

@@ -14,26 +14,23 @@ var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
 // disable map zoom when using scroll => Map Setting //
-map.scrollZoom.disable();
 
+var request = new XMLHttpRequest();
 
-// Add Storm Prediction Center Outlook //
+request.open('POST', 'https://www.spotternetwork.org/positions');
 
-fetch("https://accuweatherstefan-skliarovv1.p.rapidapi.com/listCountries", {
-	"method": "POST",
-	"headers": {
-		"content-type": "application/x-www-form-urlencoded",
-		"x-rapidapi-key": "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757",
-		"x-rapidapi-host": "AccuWeatherstefan-skliarovV1.p.rapidapi.com"
-	},
-	"body": {
-		"apiKey": "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757",
-		"regionCode": "573"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+request.setRequestHeader('Content-Type', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+var body = {
+  'id': 'APPLICATION-ID'
+};
+
+request.send(JSON.stringify(body));

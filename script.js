@@ -17,7 +17,7 @@ map.addControl(nav, 'top-left');
 map.scrollZoom.disable();
 
 
-// Storm Chasers Network //
+// NOAANWS Storm Prediction Center //
 
 map.addSource('noaa', {
   type: 'geojson',

@@ -19,7 +19,7 @@ map.scrollZoom.disable();
 
 // Add Storm Prediction Center Outlook //
 
-const data = "apiKey=%3CREQUIRED%3E&locationKey=%3CREQUIRED%3E";
+const data = null;
 
 const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
@@ -30,9 +30,8 @@ xhr.addEventListener("readystatechange", function () {
 	}
 });
 
-xhr.open("POST", "https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsByLocationKey");
-xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+xhr.open("GET", "https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=38.5&lat=-78.5");
 xhr.setRequestHeader("x-rapidapi-key", "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757");
-xhr.setRequestHeader("x-rapidapi-host", "AccuWeatherstefan-skliarovV1.p.rapidapi.com");
+xhr.setRequestHeader("x-rapidapi-host", "weatherbit-v1-mashape.p.rapidapi.com");
 
 xhr.send(data);

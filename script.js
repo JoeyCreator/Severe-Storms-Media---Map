@@ -19,19 +19,21 @@ map.scrollZoom.disable();
 
 // Add Storm Prediction Center Outlook //
 
-const data = null;
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
+fetch("https://accuweatherstefan-skliarovv1.p.rapidapi.com/listCountries", {
+	"method": "POST",
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded",
+		"x-rapidapi-key": "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757",
+		"x-rapidapi-host": "AccuWeatherstefan-skliarovV1.p.rapidapi.com"
+	},
+	"body": {
+		"apiKey": "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757",
+		"regionCode": "573"
 	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
 });
-
-xhr.open("GET", "https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=37.9643&lat=-91.8318");
-xhr.setRequestHeader("x-rapidapi-key", "6e1bbcb34amsh1edcb3a4fd5419fp14d59fjsn70c906ea9757");
-xhr.setRequestHeader("x-rapidapi-host", "weatherbit-v1-mashape.p.rapidapi.com");
-
-xhr.send(data);

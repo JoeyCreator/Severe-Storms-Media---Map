@@ -16,17 +16,6 @@ map.addControl(nav, 'top-left');
 map.scrollZoom.disable();
 
 // Storm Prediction Center // => add code below this comment //
-
-map.on('load', function () {
-  var layers = map.getStyle().layers;
-  // Find the index of the first symbol layer in the map style
-  var firstSymbolId;
-  for (var i = 0; i < layers.length; i++) {
-    if (layers[i].type === 'symbol') {
-      firstSymbolId = layers[i].id;
-      break;
-    }
-  }
   fetch("https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson")
     .then(function (response) {
       return response.json();
@@ -34,5 +23,7 @@ map.on('load', function () {
     .then(function (data) {
       L.geoJSON(data).addTo(map);
     });
+
+
 
 // Spotter Coordination -> code below //

@@ -44,7 +44,7 @@ map.on('load', function () {
 
 // Storm Prediction Center -> Spcd Day 2 //   /* Option Day1 - Day2 */
 
-
+/*
 
 map.on('load', function () {
   var layers = map.getStyle().layers;

@@ -34,19 +34,5 @@ map.on('load', function () {
     .then(function (data) {
       L.geoJSON(data).addTo(map);
     });
-  map.addLayer(
-    {
-      'id': 'spcday1',
-      'type': 'fill',
-      'source': 'spcday1',
-      'layout': {},
-      'paint': {
-        'fill-color': '#FF9A00',
-        'fill-opacity': 0.4
-      }
-    },
-    firstSymbolId
-  );
-});
 
 // Spotter Coordination -> code below //

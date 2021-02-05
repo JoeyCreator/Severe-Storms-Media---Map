@@ -4,7 +4,7 @@ mapboxgl.accessToken = mapbox_token;
 
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v10',
+  style: 'mapbox://styles/mapbox/dark-v10',
   center: [-96.052335, 39.159882],
   zoom: 3.5
 });
@@ -44,7 +44,7 @@ map.on('load', function () {
 
 // Storm Prediction Center -> Spcd Day 2 //   /* Option Day1 - Day2 */
 
-/*
+
 map.on('load', function () {
   var layers = map.getStyle().layers;
   var firstSymbolId;
@@ -54,23 +54,21 @@ map.on('load', function () {
       break;
     }
   }
-  map.addSource('spcday1', {
+  map.addSource('spcday2', {
     'type': 'geojson',
     'data': 'https://www.spc.noaa.gov/products/outlook/day2otlk_cat.nolyr.geojson'
   });
   map.addLayer(
     {
-      'id': 'spcday1',
+      'id': 'spcday2',
       'type': 'fill',
-      'source': 'spcday1',
+      'source': 'spcday2',
       'layout': {},
       'paint': {
         'fill-color': ['get', 'fill'],
         'fill-outline-color': ['get', 'stroke'],
-        'fill-opacity': 0.9
+        'fill-opacity': 0.3
       }
     },
   );
 });
-
-*/

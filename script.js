@@ -4,7 +4,11 @@ mapboxgl.accessToken = mapbox_token;
 
 var map = new mapboxgl.Map({
   container: 'map',
+<<<<<<< HEAD
   style: 'mapbox://styles/mapbox/light-v10',
+=======
+  style: mapbox://styles/mapbox/light-v10
+>>>>>>> origin/master
   center: [-96.052335, 39.159882],
   zoom: 3.5
 });

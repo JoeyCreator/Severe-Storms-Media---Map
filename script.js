@@ -27,11 +27,13 @@ map.on('load', function () {
       break;
     }
   }
-  map.addSource('spcday1', {
-    'type': 'geojson',
-    'data':
-      'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
-  });
+  fetch("https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      L.geoJSON(data).addTo(map);
+    });
   map.addLayer(
     {
       'id': 'spcday1',

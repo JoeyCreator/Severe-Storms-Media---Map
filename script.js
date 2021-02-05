@@ -36,7 +36,7 @@ map.on('load', function () {
       'paint': {
         'fill-color': ['get', 'fill'],
         'fill-outline-color': ['get', 'stroke'],
-        'fill-opacity': 0.9
+        'fill-opacity': 0.5
       }
     },
   );
@@ -44,6 +44,7 @@ map.on('load', function () {
 
 // Storm Prediction Center -> Spcd Day 2 //   /* Option Day1 - Day2 */
 
+/*
 
 map.on('load', function () {
   var layers = map.getStyle().layers;
@@ -72,3 +73,5 @@ map.on('load', function () {
     },
   );
 });
+
+*/

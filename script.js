@@ -40,6 +40,7 @@ map.addLayer(
 'layout': {},
 'paint': {
 'fill-color': ['get', 'fill'],
+'fill-outline-color': ['get', 'stroke'],
 'fill-opacity': 0.5
 }
 // This is the important part of this example: the addLayer

@@ -73,3 +73,5 @@ map.on('load', function () {
     },
   );
 });
+
+*/

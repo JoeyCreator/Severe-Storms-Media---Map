@@ -16,6 +16,7 @@ map.addControl(nav, 'top-left');
 map.scrollZoom.disable();
 
 // Storm Prediction Center // => add code below this comment //
+
   fetch("https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson")
     .then(function (response) {
       return response.json();

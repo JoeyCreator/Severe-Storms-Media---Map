@@ -28,8 +28,7 @@ map.on('load', function () {
   }
   map.addSource('spcday1', {
     'type': 'geojson',
-    'data':
-      'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+    'data': 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
   });
   map.addLayer(
     {

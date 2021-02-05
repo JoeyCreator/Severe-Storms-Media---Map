@@ -46,3 +46,5 @@ map.on('load', function () {
     firstSymbolId
   );
 });
+
+// Spotter Coordination -> code below //

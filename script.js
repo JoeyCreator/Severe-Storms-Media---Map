@@ -9,9 +9,6 @@ var map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-var nav = new mapboxgl.NavigationControl();
-map.addControl(nav, 'top-left');
-
 // disable map zoom when using scroll
 map.scrollZoom.disable();
 
@@ -39,7 +36,7 @@ map.on('load', function () {
       'paint': {
         'fill-color': ['get', 'fill'],
         'fill-outline-color': ['get', 'stroke'],
-        'fill-opacity': 0.8
+        'fill-opacity': 0.9
       }
     },
   );

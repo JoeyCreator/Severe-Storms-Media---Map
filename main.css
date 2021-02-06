@@ -48,3 +48,14 @@ body, html {
 button {
   border-radius: 5px;
 }
+
+ul {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a {
+  color: lightgray;
+  font-weight: bold;
+  text-decoration: none;
+}

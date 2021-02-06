@@ -25,7 +25,7 @@ map.on('load', function () {
   }
   map.addSource('spcday1', {
     'type': 'geojson',
-    'data': 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+    'data': 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.lyr.geojson'
   });
   map.addLayer(
     {
@@ -42,8 +42,7 @@ map.on('load', function () {
   );
 });
 
-// Storm Prediction Center -> Spcd Day 2 //   /* Option Day1 - Day2 */
-
+// Storm Prediction Center -> Spcd Day 2 //
 
 /*
 
@@ -58,7 +57,7 @@ map.on('load', function () {
   }
   map.addSource('spcday2', {
     'type': 'geojson',
-    'data': 'https://www.spc.noaa.gov/products/outlook/day2otlk_cat.nolyr.geojson'
+    'data': 'https://www.spc.noaa.gov/products/outlook/day2otlk_cat.lyr.geojson'
   });
   map.addLayer(
     {
@@ -69,7 +68,7 @@ map.on('load', function () {
       'paint': {
         'fill-color': ['get', 'fill'],
         'fill-outline-color': ['get', 'stroke'],
-        'fill-opacity': 0.3
+        'fill-opacity': 0.8
       }
     },
   );

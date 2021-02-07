@@ -66,3 +66,9 @@ button {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+label {
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+}

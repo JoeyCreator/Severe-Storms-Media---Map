@@ -43,10 +43,6 @@ map.on('load', function () {
 });
 
 
-// Notification Spc Day 1 // code below ->
-
-
-
 // Storm Prediction Center -> Spcd Day 2 //
 
 /*

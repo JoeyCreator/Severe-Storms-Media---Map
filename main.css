@@ -1,11 +1,10 @@
 header {
-  background-position: center center;
   background-size: cover;
-  padding: 150px;
+  padding: 156 0px;
 }
 
 section {
-  padding: 156px 0;
+  padding: 150px 0;
 }
 body, html {
   height: 100%;
@@ -15,7 +14,7 @@ body, html {
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/hero.png");
-  height: 50%;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +27,7 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .hero-text button {
@@ -37,14 +36,14 @@ body, html {
   display: inline-block;
   padding: 10px 25px;
   color: black;
-  background-color: #ddd;
+  background-color: rgb(238, 235, 235);
   text-align: center;
   cursor: pointer;
 }
 
 .hero-text button:hover {
-  background-color: #555;
-  color: white;
+  background-color: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
 }
 
 button {

@@ -38,36 +38,3 @@ map.on('load', function () {
         },
     );
 });
-
-// Storm Prediction Center -> Spcd Day 2 //
-
-/*
-
-map.on('load', function () {
-  var layers = map.getStyle().layers;
-  var firstSymbolId;
-  for (var i = 0; i < layers.length; i++) {
-    if (layers[i].type === 'symbol') {
-      firstSymbolId = layers[i].id;
-      break;
-    }
-  }
-  map.addSource('spcday2', {
-    'type': 'geojson',
-    'data': 'https://www.spc.noaa.gov/products/outlook/day2otlk_cat.lyr.geojson'
-  });
-  map.addLayer(
-    {
-      'id': 'spcday2',
-      'type': 'fill',
-      'source': 'spcday2',
-      'layout': {},
-      'paint': {
-        'fill-color': ['get', 'fill'],
-        'fill-outline-color': ['get', 'stroke'],
-        'fill-opacity': 0.8
-      }
-    },
-  );
-});
-

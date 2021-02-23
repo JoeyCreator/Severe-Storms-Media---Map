@@ -9,7 +9,6 @@ console.log("%cStop", cssRule);
 
 var cssRule =
     "color: rgb(249, 162, 34);" +
-    "background-image: url("bugs.png")"; +
     "font-size: 40px;" +
     "font-weight: bold;" +
     "text-shadow: 1px 1px 5px rgb(249, 162, 34);" +

@@ -72,3 +72,26 @@ a {
   color: #fff;
   background: url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
 }
+
+.alert-danger {
+    border-radius: 5px;
+    color: black;
+    background-color: red;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial;
+    padding: 25px;
+}
+
+i {
+    color: #fff;
+}
+img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/modules/dev.png");
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 5px;
+}

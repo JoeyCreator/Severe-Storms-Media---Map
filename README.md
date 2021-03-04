@@ -1,5 +1,5 @@
 # Severe-Storms-Media---Map
-Severe Storms Media  |  Map
+    Severe Storms Media
 
 MIT License
 

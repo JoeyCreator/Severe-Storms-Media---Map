@@ -36,7 +36,7 @@ map.on('load', function () {
             'paint': {
                 'fill-color': ['get', 'fill'],
                 'fill-outline-color': ['get', 'stroke'],
-                'fill-opacity': 0.6
+                'fill-opacity': 0.3
             }
         },
     );

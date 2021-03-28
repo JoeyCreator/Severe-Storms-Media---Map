@@ -1,25 +1,25 @@
 var cssRule =
     "color: red;" +
-    "-webkit-text-stroke: 4px black;" +
+    "background-color: yellow;" +
     "font-size: 60px;" +
     "font-weight: bold;" +
     "text-shadow: 1px 1px 5px rgb(249, 162, 34);" +
     "filter: dropshadow(color=rgb(249, 162, 34), offx=1, offy=1);";
-console.log("%cStop", cssRule);
+console.log("%cWarning!", cssRule);
 
 var cssRule =
-    "color: rgb(249, 162, 34);" +
-    "font-size: 40px;" +
-    "font-weight: bold;" +
-    "text-shadow: 1px 1px 5px rgb(249, 162, 34);" +
+    "color: black;" +
+    "font-size: 20px;" +
+    "font-weight: arial;" +
+    "text-shadow: none;" +
     "filter: dropshadow(color=rgb(249, 162, 34), offx=1, offy=1);";
-console.log("%cThis is a browser feature intended for developers.", cssRule);
+console.log("%cUsing this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.Do not enter or paste code that you do not understand.", cssRule);
 
 
-var cssRule =
+/* var cssRule =
     "color:" +
     "font-size:" +
     "font-weight:" +
     "text-shadow:" +
     "filter:" +
-    console.log("%c", cssRule);
+    console.log("%c", cssRule); */

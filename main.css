@@ -84,7 +84,7 @@ a {
 }
 
 i {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/modules/dev.png");

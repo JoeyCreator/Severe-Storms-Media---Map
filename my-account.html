@@ -40,7 +40,12 @@
         <a class="nav-link" href="/Coronavirus/">Coronavirus</a>
       </li>
     <form class="form-inline my-2 my-lg-0">
-     <div id="my-signin2"></div>
+     <!-- <div id="my-signin2"></div> -->
+    <div class="g-signin2" 
+   data-onsuccess="onSignIn"
+   data-scope="https://www.googleapis.com/auth/plus.login"
+   data-accesstype="offline"
+   data-redirecturi="https://www.severestormsmedia.com/dashboard/home"></div>
     </form>
   </div>
 </nav>

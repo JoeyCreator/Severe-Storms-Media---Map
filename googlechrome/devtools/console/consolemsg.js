@@ -1,7 +1,7 @@
 var cssRule =
     "color: red;" +
     "background-color: yellow;" +
-    "font-size: 60px;" +
+    "font-size: 50px;" +
     "font-weight: bold;" +
     "text-shadow: 1px 1px 5px rgb(249, 162, 34);" +
     "filter: dropshadow(color=rgb(249, 162, 34), offx=1, offy=1);";

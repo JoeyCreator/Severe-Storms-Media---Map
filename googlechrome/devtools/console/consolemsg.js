@@ -14,12 +14,3 @@ var cssRule =
     "text-shadow: none;" +
     "filter: dropshadow(color=rgb(249, 162, 34), offx=1, offy=1);";
 console.log("%cUsing this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.Do not enter or paste code that you do not understand.", cssRule);
-
-
-/* var cssRule =
-    "color:" +
-    "font-size:" +
-    "font-weight:" +
-    "text-shadow:" +
-    "filter:" +
-    console.log("%c", cssRule); */

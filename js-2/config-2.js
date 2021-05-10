@@ -23,15 +23,15 @@ map.on('load', function () {
             break;
         }
     }
-    map.addSource('spcday1', {
+    map.addSource('spcday2', {
         'type': 'geojson',
-        'data': 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson',
+        'data': 'https://www.spc.noaa.gov/products/outlook/day2otlk_cat.nolyr.geojson'
     });
     map.addLayer(
         {
-            'id': 'spcday1',
+            'id': 'spcday2',
             'type': 'fill',
-            'source': 'spcday1',
+            'source': 'spcday2',
             'layout': {},
             'paint': {
                 'fill-color': ['get', 'fill'],

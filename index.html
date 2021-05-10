@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+
+	<!-- Modal -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+	</script>
+
+	<!-- End -->
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
 	 crossorigin="anonymous">
 
@@ -61,24 +76,79 @@
     </div>
   </div>
 </nav>
-     
 
-        <div class="modal hide fade" id="myModal">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h3>Modal header</h3>
+ <!-- NEW modal -->
+  
+   <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title">Latest Release.</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h3>Adding New Features And Options.</h3>
+          <p>Convective Outlooks issued by the Storm Prediction Center are viewable as a layer on our platform. Categories of convective outlooks range from marginal risk to high risk. Not only can you see categorial outlooks, you can also display tornado, hail, and wind outlooks. These products are used by storm chasers to help aid in the choosing of a target area.</p>
+          <p>NEXRAD radar, or Next-Generation Radar, is a network composed of 159 NWS WSR-88D radar sites all around the United States. We also have a select few radars available outside of the United States. Our map now displays level 3 reflectivity data which is easier on the viewer’s eyes. In addition to reflectivity, we also now feature enhanced echo tops, rotation history, vertically integrated liquid (VIL), hail size, and a few others.</p>
+          <p></p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
   </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
+
+
+  <!-- The Modal 
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        
+        <div class="modal-header">
+          <h4 class="modal-title">Latest Release <span class="badge rounded-pill bg-danger">NEW</span> </h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        
+        <div class="modal-body">
+          <strong>Our Recent Work:</strong>
+          We added Spc Day2 to our map, And we add spc noaa alert on the header of the page.
+        <img src="/assets/sms.png" alt="severestormsmedia.com/map.html">
+        </div>
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
   </div>
-  <div class="modal-footer">
-    <a href="#" class="btn">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
+  
 </div>
-    
-    
-     
+-->
+
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+</script>
+
+
+
+
  <div class="hero-image">
   <div class="hero-text">
       <div class="alert alert-warning" role="alert">
@@ -231,7 +301,8 @@
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Sitemap</a></li>
             </ul>
-            <button href="" id="btn-vid" class="btn btn-primary" type="submit"> <i id="icon-vid" class="bi bi-youtube"></i><br/>Upload Video</button>
+             <button type="button" class="btn btn-primary" id="myBtn">Latest Release</button>
+            <!-- <button href="" id="btn-vid" class="btn btn-primary" type="submit"> <i id="icon-vid" class="bi bi-youtube"></i><br/>Upload Video</button> -->
           </div>
         </div>
         <hr>

@@ -1,43 +1,11 @@
-const mapbox_token = "pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2tvazNsZWtoMWh6dDJwbWk2N2RoMWJkdyJ9.f-h2XRddCiT-XYo97cVzyQ"
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-mapboxgl.accessToken = mapbox_token;
 
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    center: [-96.052335, 39.159882],
-    zoom: 3.5
-});
-
-// disable map zoom when using scroll
-map.scrollZoom.disable();
-
-// Storm Prediction Center -> Spcd Day 1 //
-
-map.on('load', function () {
-    var layers = map.getStyle().layers;
-    var firstSymbolId;
-    for (var i = 0; i < layers.length; i++) {
-        if (layers[i].type === 'symbol') {
-            firstSymbolId = layers[i].id;
-            break;
-        }
-    }
-    map.addSource('spcday1', {
-        'type': 'geojson',
-        'data': 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson',
-    });
-    map.addLayer(
-        {
-            'id': 'spcday1',
-            'type': 'fill',
-            'source': 'spcday1',
-            'layout': {},
-            'paint': {
-                'fill-color': ['get', 'fill'],
-                'fill-outline-color': ['get', 'stroke'],
-                'fill-opacity': 0.3
-            }
-        },
-    );
-});
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 20,
+    id: 'mapbox/dark-v10',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2tva253dHRxMDFhMzJubzF0NmNidTV1byJ9.fuQQQ11Nb0tnr-jbWemOsQ'
+}).addTo(mymap);

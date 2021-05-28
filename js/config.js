@@ -10,11 +10,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2tva253dHRxMDFhMzJubzF0NmNidTV1byJ9.fuQQQ11Nb0tnr-jbWemOsQ'
 }).addTo(mymap);
 
-var nexrad = L.tileLayer.wms("https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0q.cgi?", {
+var mymap = L.tileLayer.wms("https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0q.cgi?", {
     layers: 'nexrad-n0r-900913',
     format: 'image/png',
     transparent: true,
     attribution: "Weather data © 2012 IEM Nexrad"
 });
 
-addWMSTiles(url,layers="1")
+addWMSTiles(url,layers="1").addTo(map);

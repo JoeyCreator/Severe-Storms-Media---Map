@@ -11,8 +11,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var subs = ["mesonet", "mesonet1", "mesonet2", "mesonet3"];
 var nexrad = L.tileLayer.wms("https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0q.cgi", {
-    layers: 'nexrad-n0r-900913',
+    layers: 'n0q',
     format: 'image/png',
-    transparent: false,
+    transparent: true,
     attribution: "Weather data © 2012 IEM Nexrad"
 }).addTo(mymap);

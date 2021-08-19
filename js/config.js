@@ -1,36 +1,26 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2txZWU1eHpiMDBuczJwcjFzYzgyaXlmaSJ9.Zuq7AJyK1RRGN-ZFbJxY6A';
-var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/dark-v10',
-	center: [-96.052335, 39.159882],
-	zoom: 4.5
+var mymap = L.map('mapid').setView([39.159882, -96.052335], 4.5);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+	attribution: '2021 &copy; severestormsmedia.com',
+	maxZoom: 18,
+	id: 'mapbox/light-v10',
+	tileSize: 512,
+	zoomOffset: -1,
+	accessToken: 'pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2tzM214YnU1MHRuMTJwcnd1OWVocW5hNyJ9.WVXk8pjKg6KMAOYdL8nDRg'
+}).addTo(mymap);
+
+map.addSource('spcday1', {
+	type: 'geojson',
+	data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
 });
 
-map.scrollZoom.disable();
-
-const longitude = e.result.geometry.coordinates[0];
-const latitude = e.result.geometry.coordinates[1];
-
-const currentConditionsURL =
-	"https://api.weather.com/v1/geocode/" + latitude + "/" + longitude + "/observation.json?language=en=USunits=e&apiKey" + twcApiKey;
-
-
-map.addSource("twcRadar", {
-	type: "raster",
-	tiles: [
-		"https://api.weather.com/v3/TileServer/tile/radar?ts=" + latestTimeSlice + "&xyz={x}:{y:{z}&apikey=" + twcApiKey,
-	],
-	tileSize: 256,
+map.addLayer({
+	'id': 'spcday1',
+	'type': 'fill',
+	'source': 'spcday1',
+	'paint': {
+		'fill-color': ['get', 'fill'],
+		'fill-outline-color': ['get', 'stroke'],
+		'fill-opacity': 0.5
+	}
 });
-
-map.addLayer(
-	{
-		id: "radar",
-		type: "raster",
-		source: "twcRadar",
-		paint: {
-			"raster-opacity": 05,
-		},
-	},
-	"aeroway-line"
-);

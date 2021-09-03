@@ -12,7 +12,7 @@ map.addSource('spcday1', {
 	data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
 });
 
-map.addLayer('spcday1')
+map.addSource('spcday1')
 'id': 'spcday1',
 	'type': 'fill',
 		'source': 'spcday1',

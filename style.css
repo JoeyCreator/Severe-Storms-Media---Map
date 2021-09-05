@@ -73,3 +73,7 @@ label {
   font-size: 25px;
   color: #2196F3;
 }
+.sidenav > input[type='checkbox'] {
+	position: relative;
+	cursor: pointer;
+}

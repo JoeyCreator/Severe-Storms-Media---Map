@@ -13,7 +13,6 @@ map.scrollZoom.disable();
 map.on('load', () => {
 	map.addSource('spcday1', {
 		type: 'geojson',
-		// Use a URL for the value for the `data` property.
 		data: ' https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
 	});
 

@@ -10,16 +10,16 @@ var map = new mapboxgl.Map({
 map.scrollZoom.disable();
 
 map.on('load', () => {
-	map.addSource('earthquakes', {
+	map.addSource('chasers', {
 		type: 'geojson',
 		// Use a URL for the value for the `data` property.
-		data: 'https://severestormsmedia.com/api/chasers/chasers.geojson'
+		data: 'https://severestormsmedia.com/api/chasers/chasers?geojson=true'
 	});
 
 	map.addLayer({
-		'id': 'earthquakes-layer',
+		'id': 'chasers-layer',
 		'type': 'circle',
-		'source': 'earthquakes',
+		'source': 'chasers',
 		'paint': {
 			'circle-radius': 8,
 			'circle-stroke-width': 2,

@@ -1,10 +1,10 @@
 {
-  "type": "Feature",
+  "type": "geojson",
   "geometry": {
-    "type": "Point",
+    "type": "circle",
     "coordinates": [45.4896, -73.8206]
   },
   "properties": {
-    "name": "Dinagat Islands"
+    "name": "Joey Cadieux"
   }
 }

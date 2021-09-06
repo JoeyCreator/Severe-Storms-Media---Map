@@ -9,31 +9,31 @@ var map = new mapboxgl.Map({
 // disable map zoom when using scroll
 map.scrollZoom.disable();
 
+
 map.on('load', () => {
-	map.addSource('chasers', {
+	map.addSource('noaa', {
 		type: 'geojson',
-		// Use a URL for the value for the `data` property.
-		data: 'https://severestormsmedia.com/api/chasers/chasers?geojson=true'
+		data: 'http://mesonet.agron.iastate.edu/json/sbw_by_point.py?lon={longitude}&lat={latitude}&callback=gotData'
 	});
 
 	map.addLayer({
-		'id': 'chasers-layer',
-		'type': 'circle',
-		'source': 'chasers',
+		'id': 'noaa-layer',
+		'type': 'fill',
+		'source': 'noaa',
 		'paint': {
-			'circle-radius': 8,
-			'circle-stroke-width': 2,
-			'circle-color': 'red',
-			'circle-stroke-color': 'white'
+			'fill-color': ['get', 'fill'],
+			'fill-outline-color': ['get', 'stroke'],
+			'fill-opacity': 0.5
 		}
 	});
 });
 
 
+
 map.on('load', () => {
 	map.addSource('spcday1', {
 		type: 'geojson',
-		data: ' https://www.spc.noaa.gov/products/outlook/day1otlk_cat.nolyr.geojson'
+		data: 'https://www.spc.noaa.gov/products/outlook/day1otlk_cat.lyr.geojson'
 	});
 
 	map.addLayer({

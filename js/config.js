@@ -9,6 +9,26 @@ var map = new mapboxgl.Map({
 // disable map zoom when using scroll
 map.scrollZoom.disable();
 
+map.on('load', () => {
+	map.addSource('earthquakes', {
+		type: 'geojson',
+		// Use a URL for the value for the `data` property.
+		data: 'https://severestormsmedia.com/api/chasers/chasers.geojson'
+	});
+
+	map.addLayer({
+		'id': 'earthquakes-layer',
+		'type': 'circle',
+		'source': 'earthquakes',
+		'paint': {
+			'circle-radius': 8,
+			'circle-stroke-width': 2,
+			'circle-color': 'red',
+			'circle-stroke-color': 'white'
+		}
+	});
+});
+
 
 map.on('load', () => {
 	map.addSource('spcday1', {

@@ -10,25 +10,6 @@ var map = new mapboxgl.Map({
 map.scrollZoom.disable();
 
 
-map.on('load', () => {
-	map.addSource('noaa', {
-		type: 'geojson',
-		data: 'http://mesonet.agron.iastate.edu/json/sbw_by_point.py?lon={longitude}&lat={latitude}&callback=gotData'
-	});
-
-	map.addLayer({
-		'id': 'noaa-layer',
-		'type': 'fill',
-		'source': 'noaa',
-		'paint': {
-			'fill-color': ['get', 'fill'],
-			'fill-outline-color': ['get', 'stroke'],
-			'fill-opacity': 0.5
-		}
-	});
-});
-
-
 
 map.on('load', () => {
 	map.addSource('spcday1', {
